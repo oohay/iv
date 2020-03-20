@@ -1,7 +1,7 @@
 # JUnit example
 
 This is a simple Java application with JUnit tests.  
-(JUnit)[http://junit.org/] is a simple framework to write repeatable tests.
+[JUnit](http://junit.org/) is a simple framework to write repeatable tests.
 
 
 ## Maven instructions
