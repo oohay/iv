@@ -1,6 +1,6 @@
 # JUnit example
 
-This is a simple Java application with JUnit tests. 
+This is a simple Java application with JUnit tests.  
 (JUnit)[http://junit.org/] is a simple framework to write repeatable tests.
 
 
