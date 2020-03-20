@@ -44,9 +44,10 @@ To test the source code:
 
 ### Resource files
 
-The following configuration copies resource files to target folder, both in the `main` source and in the `test` source.
+The following configuration in the POM file copies resource files to target folder, both in the `main` source and in the `test` source.
 
 ```
+    <build>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
