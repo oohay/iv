@@ -13,11 +13,11 @@ It is also necessary to add the following dependency:
 
 ```
     <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.12</version>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.6.0</version>
         <scope>test</scope>
-    </dependency> 
+    </dependency>
 ```
 
 The scope says that the library should only be used for testing.

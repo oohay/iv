@@ -16,16 +16,12 @@ public class ExampleTest {
     // one-time initialization and clean-up
 
     @BeforeAll
-    public static void oneTimeSetUp() {
-
-    }
+    public static void oneTimeSetUp() { }
 
     @AfterAll
-    public static void oneTimeTearDown() {
+    public static void oneTimeTearDown() { }
 
-    }
-
-
+    
     // members
 
     private Example example;
@@ -65,19 +61,13 @@ public class ExampleTest {
     }
 
     @Test
-    public void testSetEmptyGreeting() {
-        assertThrows(IllegalArgumentException.class, () -> example.setGreeting(""));
-    }
+    public void testSetEmptyGreeting() { assertThrows(IllegalArgumentException.class, () -> example.setGreeting("")); }
 
     @Test
-    public void testDefaultGreet() {
-        assertEquals("Hello friend!", example.greet("friend"));
-    }
+    public void testDefaultGreet() { assertEquals("Hello friend!", example.greet("friend")); }
 
     @Test
-    public void testGreetWithNullName() {
-        assertThrows(IllegalArgumentException.class, () -> example.greet(null));
-    }
+    public void testGreetWithNullName() { assertThrows(IllegalArgumentException.class, () -> example.greet(null)); }
 
     @Test
     public void testGreetWithEmptyName() {
