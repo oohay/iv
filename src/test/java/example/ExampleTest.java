@@ -1,8 +1,9 @@
 package example;
 
-import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.*;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  *  Test suite
@@ -14,12 +15,12 @@ public class ExampleTest {
 
     // one-time initialization and clean-up
 
-    @BeforeClass
+    @BeforeAll
     public static void oneTimeSetUp() {
 
     }
 
-    @AfterClass
+    @AfterAll
     public static void oneTimeTearDown() {
 
     }
@@ -32,12 +33,12 @@ public class ExampleTest {
 
     // initialization and clean-up for each test
 
-    @Before
+    @BeforeEach
     public void setUp() {
         example = new Example();
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
         example = null;
     }
@@ -57,15 +58,15 @@ public class ExampleTest {
         assertEquals(greeting, example.getGreeting());
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testSetNullGreeting() {
-        // this test should throw an exception of the class above
-        example.setGreeting(null);
+        // this test should throw an exception of the IllegalArgumentException class
+        assertThrows(IllegalArgumentException.class, () -> example.setGreeting(null));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testSetEmptyGreeting() {
-        example.setGreeting("");
+        assertThrows(IllegalArgumentException.class, () -> { example.setGreeting(""); });
     }
 
     @Test
@@ -73,9 +74,9 @@ public class ExampleTest {
         assertEquals("Hello friend!", example.greet("friend"));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testGreetWithNullName() {
-        example.greet(null);
+        assertThrows(IllegalArgumentException.class, () -> { example.greet(null); });
     }
 
     @Test
