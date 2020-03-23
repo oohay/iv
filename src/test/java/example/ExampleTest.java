@@ -66,7 +66,7 @@ public class ExampleTest {
 
     @Test
     public void testSetEmptyGreeting() {
-        assertThrows(IllegalArgumentException.class, () -> { example.setGreeting(""); });
+        assertThrows(IllegalArgumentException.class, () -> example.setGreeting(""));
     }
 
     @Test
@@ -76,7 +76,7 @@ public class ExampleTest {
 
     @Test
     public void testGreetWithNullName() {
-        assertThrows(IllegalArgumentException.class, () -> { example.greet(null); });
+        assertThrows(IllegalArgumentException.class, () -> example.greet(null));
     }
 
     @Test
