@@ -6,39 +6,41 @@ package example;
  */
 public class Example {
 
-    // main
+	// main
 
-    public static void main(String[] args) throws Exception {
-        Example example = new Example();
-        example.setGreeting("Hi");
-        String result = example.greet("friend");
-        System.out.println(result);
-    }
+	public static void main(String[] args) throws Exception {
+		/* This is an ad-hoc test. 
+		Look into the src/test/java folder for systematic tests. */
+		Example example = new Example();
+		example.setGreeting("Hi");
+		String result = example.greet("friend");
+		System.out.println(result);
+	}
 
-    // members
+	// members
 
-    private String greeting = "Hello";
+	private String greeting = "Hello";
 
-    // accessors
+	// accessors
 
-    public void setGreeting(String greeting) {
-        if (greeting == null || greeting.length() == 0)
-            throw new IllegalArgumentException();
-        this.greeting = greeting;
-    }
+	public void setGreeting(String greeting) {
+		if (greeting == null || greeting.length() == 0)
+			throw new IllegalArgumentException();
+		this.greeting = greeting;
+	}
 
-    public String getGreeting() {
-        return this.greeting;
-    }
+	public String getGreeting() {
+		return this.greeting;
+	}
 
-    // other methods
+	// other methods
 
-    public String greet(String name) {
-        if (name == null)
-            throw new IllegalArgumentException();
-        if (name.length() == 0)
-            return this.greeting + "!";
-        return this.greeting + " " + name + "!";
-    }
+	public String greet(String name) {
+		if (name == null)
+			throw new IllegalArgumentException();
+		if (name.length() == 0)
+			return this.greeting + "!";
+		return this.greeting + " " + name + "!";
+	}
 
 }
