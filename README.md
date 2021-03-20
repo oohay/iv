@@ -3,10 +3,9 @@
 This is a simple Java application with JUnit tests.  
 [JUnit](http://junit.org/) is a simple framework to write repeatable tests.
 
-
 ## Maven instructions
 
-### Dependency 
+### Dependency
 
 To use JUnit in Maven, it is necessary to put the test classes under `src/test/java`.  
 It is also necessary to add the following dependency:
@@ -75,7 +74,7 @@ import java.util.Properties;
 
     final String resourcePath = "config.properties";
 
-    InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(resourcePath);	
+    InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(resourcePath);
     Properties properties = new Properties();
     properties.load(inputStream);
 
@@ -84,7 +83,6 @@ import java.util.Properties;
     String propertyValue = properties.getProperty("propertyName");
 ```
 
-
 ## To configure the Maven project in Eclipse
 
 'File', 'Import...', 'Maven'-'Existing Maven Projects'
@@ -92,7 +90,6 @@ import java.util.Properties;
 'Select root directory' and 'Browse' to the project base folder.
 
 Check that the desired POM is selected and 'Finish'.
-
 
 ----
 
