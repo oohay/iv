@@ -8,7 +8,7 @@ This is a simple Java application with JUnit tests.
 ### Dependency
 
 To use JUnit in Maven, it is necessary to put the test classes under `src/test/java`.  
-It is also necessary to add the following dependency:
+It is also necessary to have the following dependency (already implemented):
 
 ```
     <dependency>
