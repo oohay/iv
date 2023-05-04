@@ -12,7 +12,7 @@ public class May5Test {
 
 	@Test
 	public void testFoo() {
-		assertEquals("bar", May5.foo());
+		assertEquals("foo", May5.foo());
 	}
 
 }
