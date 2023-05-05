@@ -1,11 +1,7 @@
 package example;
 
 
-import java.util.ArrayList;
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Solution {
     private List<FileData> input;
@@ -39,6 +35,14 @@ public class Solution {
         List<Integer> sizes = new ArrayList<>(collections.values());
         Collections.sort(sizes, Collections.reverseOrder());
         return sizes;
+
+    }
+
+    public List<Map.Entry<String, Integer>> biggestCollections() {
+        HashMap<String, Integer> collections = computeCollectionSizes();
+        List< Map.Entry<String, Integer>> entries = new ArrayList<>(collections.entrySet());
+        Collections.sort(entries, Comparator.comparing(p -> -p.getValue()));
+return entries;
 
     }
 }

@@ -8,5 +8,6 @@ public class SolutionTest {
         Solution solution = new Solution();
         solution.computeCollectionSizes();
         solution.collectionSizeDescending();
+        solution.biggestCollections();
     }
 }
