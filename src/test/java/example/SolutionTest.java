@@ -6,5 +6,7 @@ public class SolutionTest {
     @Test
     public void testSolution() {
         Solution solution = new Solution();
+        solution.computeCollectionSizes();
+        solution.collectionSizeDescending();
     }
 }
